@@ -1,0 +1,47 @@
+/* @collapse */
+/* Utility Classes */
+.primary-clr {
+	background-color: blue;
+}
+.secondary-clr {
+	background-color: blue;
+}
+.accent-clr {
+	background-color: blue;
+}
+.card {
+	background-color: white;
+	border-left: 10px;
+	border-radius: 8px;
+	border-color: red;
+	width: 345px;
+	height: 166px;
+	filter: drop-shadow(0, 0, 4px);
+}
+.row-span-3 {
+	grid-row: span 3;
+}
+.col-span-2 {
+	grid-column: span 2;
+}
+/* Panel Classes  */
+.desktop-wrapper {
+	display: grid;
+	grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.left-nav-panel {
+	background-color: grey;
+}
+.search-panel {
+	display: flex;
+}
+.sort-panel {
+	display: flex;
+}
+.issue-list-panel {
+	display: flex;
+}
+.issue-panel {
+	background-color: white;
+}
