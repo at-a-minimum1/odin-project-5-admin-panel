@@ -5,9 +5,145 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
+		<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 
 		<title>The Bug Report</title>
 	</head>
-	<body></body>
+	<body>
+		<div class="desktop-wrapper">
+
+			<div class="left-nav-panel row-span-3">
+				<div class="title">
+					<h2>
+						<iconify-icon
+							icon="fluent:bug-prohibited-20-filled"
+							width="42" height="42"></iconify-icon></iconify-icon>
+						BUG REPORT
+					</h2>
+				</div>
+
+				<br />
+				<div class="main-nav">
+					<h3>
+						<iconify-icon icon="bxs:home" width="28" height="28"></iconify-icon> &nbsp
+						<a href="" id="nav-home">Home</a> 
+					</h3>
+					<h3>
+						<iconify-icon
+							icon="healthicons:ui-user-profile-negative" width="28" height="28"
+						></iconify-icon> &nbsp
+						<a href="" id="nav-profile">Profile</a>
+					</h3>
+					<h3>
+						<iconify-icon icon="clarity:tasks-solid" width="28" height="28"></iconify-icon> &nbsp
+						 <a href="" id="nav-tasks">Tasks</a>
+					</h3>
+					<h3>
+						<iconify-icon icon="fluent:bug-24-filled" width="28" height="28"></iconify-icon> &nbsp
+						<a href="" id="nav-open-issues">Open Issues</a>
+					</h3>
+					<h3>
+						<iconify-icon icon="game-icons:boot-stomp" width="28" height="28"></iconify-icon> &nbsp
+                        <a href="" id="nav-closed-issues">Closed Issues</a>
+					</h3>
+				</div>
+
+				<div class="subnav-bottom">
+					<div class="subnav">
+						<h3>
+							<iconify-icon icon="fluent:people-28-filled" width="28" height="28"></iconify-icon> &nbsp
+							<a href="" id="nav-team">Team</a>
+							
+						</h3>
+						<h3>
+							<iconify-icon icon="ic:round-history" width="28" height="28"></iconify-icon> &nbsp
+							 <a href="" id="nav-history">History</a>
+						</h3>
+						<h3>
+							<iconify-icon icon="jam:messages" width="28" height="28"></iconify-icon> &nbsp
+							 <a href="" id="nav-messages">Messages</a>
+						</h3>
+					</div>
+					<h3>
+						<iconify-icon icon="bi:question-square-fill" width="28" height="28"></iconify-icon> &nbsp
+						<a href="" id="nav-support">Support</a>
+					</h3>
+					<h3>
+						<iconify-icon icon="ci:settings-filled" width="28" height="28"></iconify-icon> &nbsp
+						<a href="" id="nav-settings">Settings</a>
+					</h3>
+				</div>
+			</div>
+			<div class="search-panel col-span-2 primary-clr">
+                <div class="row-left">
+                    <iconify-icon icon="entypo:magnifying-glass" width="40" height="40"></iconify-icon>
+                    <input type="text" name="searchbar" id="searchbar" class="">
+                </div>
+                <div class="row-right">  
+                    <a href="" id="user-top-right"><h4>
+						Todd Greenman
+						<iconify-icon icon="pajamas:profile" width="30" height="30"></iconify-icon>
+					</h4></a>
+					
+                </div>
+                <div class="row-left">
+                        <h5>Hey there Todd,</h5>
+                </div>
+              <div></div>
+                <div class="row-left">
+                    &nbsp; &nbsp;
+                    <h4>You have 20 unread messages and 3 tasks left incomplete</h4>
+                </div>
+                <div class="row-right">
+                    <button id="btn-new" class="accent-clr"> New</button>
+                    <button id="btn-submit" class="accent-clr">Submit
+                    </button>
+                </div>
+            </div>
+			<div class="sort-panel col-span-2 secondary-clr">
+				<h3>Sort By:</h3> 
+				<div class="dropdown-btns">
+					<button class="dropBtn accent-clr">Assignee
+						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
+					</button>
+					<button class="dropBtn accent-clr">Reporter
+						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
+					</button>
+					<button class="dropBtn accent-clr">Status
+						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"><iconify-icon>
+					</button>
+					<button class="dropBtn accent-clr">Type
+						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
+
+					</button>
+					<button class="dropBtn accent-clr">Status Category
+						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
+
+					</button>
+				</div>
+				<a href="" id="collapse-filter">
+					<p id="collapse-filter"><u>Collapse Filter</u></p>
+				</a>
+			</div>
+			<div class="results-panel primary-clr col-span-2">
+				<div class="issue-list-panel primary-clr col-span-2">
+				<div class="card-div">
+					<card class="card-border-red">
+						<h4>Subject line for Error</h4> <br>
+						<h6>Environment:</h6>
+					</card>
+					<card class="card-border-red">This is a card</card>
+					<card class="card-border-green">This is a card</card>
+					<card class="card-border-blue">This is a card</card>
+					<card class="card-border-blue">This is a card</card>
+					<card class="card-border-blue">This is a card</card>
+				</div>
+					
+				
+				</div>
+				<div class="issue-panel primary-clr">chosen issue</div>
+			</div>
+		</div>
+	</body>
 	<script src="app.js"></script>
 </html>
