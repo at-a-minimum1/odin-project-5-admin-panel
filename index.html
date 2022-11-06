@@ -24,25 +24,25 @@
 
 				<br />
 				<div class="main-nav">
-					<h3>
+					<h3 class="nav-item">
 						<iconify-icon icon="bxs:home" width="28" height="28"></iconify-icon> &nbsp
 						<a href="" id="nav-home">Home</a> 
 					</h3>
-					<h3>
+					<h3 class="nav-item">
 						<iconify-icon
 							icon="healthicons:ui-user-profile-negative" width="28" height="28"
 						></iconify-icon> &nbsp
 						<a href="" id="nav-profile">Profile</a>
 					</h3>
-					<h3>
+					<h3 class="nav-item">
 						<iconify-icon icon="clarity:tasks-solid" width="28" height="28"></iconify-icon> &nbsp
 						 <a href="" id="nav-tasks">Tasks</a>
 					</h3>
-					<h3>
+					<h3 class="nav-item">
 						<iconify-icon icon="fluent:bug-24-filled" width="28" height="28"></iconify-icon> &nbsp
 						<a href="" id="nav-open-issues">Open Issues</a>
 					</h3>
-					<h3>
+					<h3 class="nav-item">
 						<iconify-icon icon="game-icons:boot-stomp" width="28" height="28"></iconify-icon> &nbsp
                         <a href="" id="nav-closed-issues">Closed Issues</a>
 					</h3>
@@ -50,25 +50,25 @@
 
 				<div class="subnav-bottom">
 					<div class="subnav">
-						<h3>
+						<h3 class="nav-item">
 							<iconify-icon icon="fluent:people-28-filled" width="28" height="28"></iconify-icon> &nbsp
 							<a href="" id="nav-team">Team</a>
 							
 						</h3>
-						<h3>
+						<h3 class="nav-item">
 							<iconify-icon icon="ic:round-history" width="28" height="28"></iconify-icon> &nbsp
 							 <a href="" id="nav-history">History</a>
 						</h3>
-						<h3>
+						<h3 class="nav-item">
 							<iconify-icon icon="jam:messages" width="28" height="28"></iconify-icon> &nbsp
 							 <a href="" id="nav-messages">Messages</a>
 						</h3>
 					</div>
-					<h3>
+					<h3 class="nav-item">
 						<iconify-icon icon="bi:question-square-fill" width="28" height="28"></iconify-icon> &nbsp
 						<a href="" id="nav-support">Support</a>
 					</h3>
-					<h3>
+					<h3 class="nav-item">
 						<iconify-icon icon="ci:settings-filled" width="28" height="28"></iconify-icon> &nbsp
 						<a href="" id="nav-settings">Settings</a>
 					</h3>
@@ -100,31 +100,70 @@
                     </button>
                 </div>
             </div>
-			<div class="sort-panel col-span-2 secondary-clr">
+			<div class="sort-panel col-span-2 secondary-clr" id="sortPanel">
 				<h3>Sort By:</h3> 
 				<div class="dropdown-btns">
-					<button class="dropBtn accent-clr">Assignee
-						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
-					</button>
-					<button class="dropBtn accent-clr">Reporter
-						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
-					</button>
-					<button class="dropBtn accent-clr">Status
-						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"><iconify-icon>
-					</button>
-					<button class="dropBtn accent-clr">Type
-						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
-
-					</button>
-					<button class="dropBtn accent-clr">Status Category
-						<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
-
-					</button>
+					<div class="div-btn">
+						<button onclick="showOptions(0)" class="dropBtn accent-clr">Assignee
+							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
+						</button>
+						<div id="assigneeDropdown" class="dropdown-content primary-clr hide">
+							<a href="#user00" class="dropdown-item">Phillip</a>
+							<a href="#user01" class="dropdown-item">Jason</a>
+							<a href="#user02" class="dropdown-item">Suzie</a>
+						</div>
+					</div>
+					<!-- fkfkf -->
+					<div class="dropdown-btns">
+						<button onclick="showOptions(1)" class="dropBtn accent-clr">Reporter
+							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
+						</button>
+						<div id="reporterDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
+							<a href="#user00" class="dropdown-item">Philli</a>
+							<a href="#user01" class="dropdown-item">Ja</a>
+							<a href="#user02" class="dropdown-item">Suzie</a>
+						</div>
+					<!--  -->
+					</div>
+					<div class="dropdown-btns">
+						<button onclick="showOptions(2)" class="dropBtn accent-clr">Status
+							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24">
+								<iconify-icon>
+						</button>
+						<div id="statusDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
+							<a href="#user00" class="dropdown-item">Phillip</a>
+							<a href="#user01" class="dropdown-item">Jason</a>
+							<a href="#user02" class="dropdown-item">Su</a>
+						</div>
+					</div>
+					<!--  -->
+					<div class="dropdown-btns"> 
+						<button onclick="showOptions(3)" class="dropBtn accent-clr">Type
+							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>	
+						</button>
+						<div id="typeDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
+							<a href="#user00" class="dropdown-item">Phip</a>
+							<a href="#user01" class="dropdown-item">Jason</a>
+							<a href="#user02" class="dropdown-item">Suzie</a>
+						</div>
+					</div>
+					<!--  -->
+					<div class="dropdown-btns"> 
+						<button onclick="showOptions(4)" class="dropBtn accent-clr">Status Category
+							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
+						</button>
+						<div id="statusCategoryDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
+							<a href="#user00" class="dropdown-item">Phillip</a>
+							<a href="#user01" class="dropdown-item">Jason</a>
+							<a href="#user02" class="dropdown-item">Sie</a>
+						</div>
+					</div>				
 				</div>
-				<a href="" id="collapse-filter">
+				<a href="" id="collapse-filter" onclick="showOptions(5)">
 					<p id="collapse-filter"><u>Collapse Filter</u></p>
 				</a>
-			</div>
+					<!-- <button id="collapse-filter" onclick="showOptions(5)">Collapse Filter</button>		-->
+		</div>
 			<div class="results-panel primary-clr col-span-2">
 				<div class="issue-list-panel primary-clr col-span-2">
 				<div class="card-div">
