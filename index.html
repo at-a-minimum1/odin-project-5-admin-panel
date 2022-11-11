@@ -76,7 +76,7 @@
 			</div>
 			<div class="search-panel col-span-2 primary-clr">
                 <div class="row-left">
-                    <iconify-icon icon="entypo:magnifying-glass" width="40" height="40"></iconify-icon>
+                    <iconify-icon icon="entypo:magnifying-glass" width="40" height="40" class="search-icon"></iconify-icon>
                     <input type="text" name="searchbar" id="searchbar" class="">
                 </div>
                 <div class="row-right">  
@@ -119,8 +119,8 @@
 							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
 						</button>
 						<div id="reporterDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
-							<a href="#user00" class="dropdown-item">Philli</a>
-							<a href="#user01" class="dropdown-item">Ja</a>
+							<a href="#user00" class="dropdown-item">Phillip</a>
+							<a href="#user01" class="dropdown-item">Jason</a>
 							<a href="#user02" class="dropdown-item">Suzie</a>
 						</div>
 					<!--  -->
@@ -131,9 +131,9 @@
 								<iconify-icon>
 						</button>
 						<div id="statusDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
-							<a href="#user00" class="dropdown-item">Phillip</a>
-							<a href="#user01" class="dropdown-item">Jason</a>
-							<a href="#user02" class="dropdown-item">Su</a>
+							<a href="#user00" class="dropdown-item">Open</a>
+							<a href="#user01" class="dropdown-item">Closed</a>
+							<a href="#user02" class="dropdown-item">In Process</a>
 						</div>
 					</div>
 					<!--  -->
@@ -142,46 +142,123 @@
 							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>	
 						</button>
 						<div id="typeDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
-							<a href="#user00" class="dropdown-item">Phip</a>
-							<a href="#user01" class="dropdown-item">Jason</a>
-							<a href="#user02" class="dropdown-item">Suzie</a>
+							<a href="#user00" class="dropdown-item">Frontend bug</a>
+							<a href="#user01" class="dropdown-item">Backend bug</a>
 						</div>
 					</div>
 					<!--  -->
 					<div class="dropdown-btns"> 
-						<button onclick="showOptions(4)" class="dropBtn accent-clr">Status Category
+						<button onclick="showOptions(4)" class="dropBtn accent-clr">Priority
 							<iconify-icon inline icon="gridicons:dropdown" width="24" height="24"></iconify-icon>
 						</button>
 						<div id="statusCategoryDropdown" class="dropdown-content primary-clr hide lazy-debug-fix">
-							<a href="#user00" class="dropdown-item">Phillip</a>
-							<a href="#user01" class="dropdown-item">Jason</a>
-							<a href="#user02" class="dropdown-item">Sie</a>
+							<a href="#user00" class="dropdown-item">High</a>
+							<a href="#user01" class="dropdown-item">Medium</a>
+							<a href="#user02" class="dropdown-item">Low</a>
 						</div>
 					</div>				
 				</div>
-				<a href="" id="collapse-filter" onclick="showOptions(5)">
-					<p id="collapse-filter"><u>Collapse Filter</u></p>
-				</a>
-					<!-- <button id="collapse-filter" onclick="showOptions(5)">Collapse Filter</button>		-->
+				<!-- <a href="" id="collapse-filter" onclick="showOptions(5)"> -->
+					<p id="collapse-filter" onclick="showOptions(5)" style="cursor: pointer;"><u>Collapse Filter</u></p>
+				<!-- </a> -->
+					<!-- <button id="collapse-filter" onclick="showOptions(5)">Collapse Filter</button>	
+						-->
+						<!-- https://stackoverflow.com/questions/90178/make-a-div-fill-the-height-of-the-remaining-screen-space -->
 		</div>
-			<div class="results-panel primary-clr col-span-2">
+			<div class="results-panel primary-clr col-span-2" id="resultsPanel">
 				<div class="issue-list-panel primary-clr col-span-2">
 				<div class="card-div">
-					<card class="card-border-red">
-						<h4>Subject line for Error</h4> <br>
+						<card class="card-border-red" onclick="" 	style="cursor: pointer;">
+						<iconify-icon icon="akar-icons:edit" width="26" height="26" class="icon" onclick="" style="cursor: pointer;"></iconify-icon>
+
+						<h4>Results panel doesn't resize</h4> 
+						<br>
 						<h6>Environment:</h6>
+						<p class="key">Key: NUC-000</p>
+						<div class="icons-btm-rt">
+							<iconify-icon icon="flat-color-icons:high-priority" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="fluent-mdl2:add-favorite" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="bi:share" width="22" height="22"></iconify-icon>
+						</div>
 					</card>
-					<card class="card-border-red">This is a card</card>
-					<card class="card-border-green">This is a card</card>
-					<card class="card-border-blue">This is a card</card>
-					<card class="card-border-blue">This is a card</card>
-					<card class="card-border-blue">This is a card</card>
+
+					<card class="card-border-red"  onclick="" style="cursor: pointer;">
+					<iconify-icon icon="akar-icons:edit" width="26" height="26" class="icon" onclick="" style="cursor: pointer;">
+					</iconify-icon>
+					
+						<h4>Subject line doesn't wrap</h4>
+						<br>
+						<h6>Environment:</h6>
+						<p class="key">Key: NUC-000</p>
+						<div class="icons-btm-rt">
+							<iconify-icon icon="flat-color-icons:high-priority" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="fluent-mdl2:add-favorite" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="bi:share" width="22" height="22"></iconify-icon>
+						</div>
+					</card>
+					<card class="card-border-green"  onclick="" style="cursor: pointer;">
+						<iconify-icon icon="akar-icons:edit" width="26" height="26" class="icon" onclick="" style="cursor: pointer;">
+						</iconify-icon>
+						
+						<h4>Issue Cards aren't updatable</h4>
+						<br>
+						<h6>Environment:</h6>
+						<p class="key">Key: NUC-000</p>
+						<div class="icons-btm-rt">
+							<iconify-icon icon="flat-color-icons:high-priority" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="fluent-mdl2:add-favorite" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="bi:share" width="22" height="22"></iconify-icon>
+						</div>
+					</card>
+					<card class="card-border-blue"  onclick="" style="cursor: pointer;">
+						<iconify-icon icon="akar-icons:edit" width="26" height="26" class="icon" onclick="" style="cursor: pointer;">
+						</iconify-icon>
+						
+						<h4>Subject line for Error</h4>
+						<br>
+						<h6>Environment:</h6>
+						<p class="key">Key: NUC-000</p>
+						<div class="icons-btm-rt">
+							<iconify-icon icon="flat-color-icons:high-priority" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="fluent-mdl2:add-favorite" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="bi:share" width="22" height="22"></iconify-icon>
+						</div>
+					</card>
+					<card class="card-border-blue"  onclick="" style="cursor: pointer;">
+						<iconify-icon icon="akar-icons:edit" width="26" height="26" class="icon" onclick="" style="cursor: pointer;">
+						</iconify-icon>
+						
+						<h4>Subject line for Error</h4>
+						<br>
+						<h6>Environment:</h6>
+						<p class="key">Key: NUC-000</p>
+						<div class="icons-btm-rt">
+							<iconify-icon icon="flat-color-icons:high-priority" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="fluent-mdl2:add-favorite" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="bi:share" width="22" height="22"></iconify-icon>
+						</div>
+					</card>
+					<card class="card-border-blue"  onclick="" style="cursor: pointer;">
+						<iconify-icon icon="akar-icons:edit" width="26" height="26" class="icon" onclick="" style="cursor: pointer;">
+						</iconify-icon>
+						
+						<h4>Subject line for Error</h4>
+						<br>
+						<h6>Environment:</h6>
+						<p class="key">Key: NUC-000</p>
+						<div class="icons-btm-rt">
+							<iconify-icon icon="flat-color-icons:high-priority" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="fluent-mdl2:add-favorite" width="22" height="22"></iconify-icon>
+							<iconify-icon icon="bi:share" width="22" height="22"></iconify-icon>
+						</div>
+					</card>
 				</div>
 					
 				
 				</div>
 				<div class="issue-panel primary-clr">chosen issue</div>
 			</div>
+
 		</div>
 	</body>
 	<script src="app.js"></script>

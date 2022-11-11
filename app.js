@@ -25,14 +25,17 @@ function showOptions(num) {
 		document.getElementById("statusCategoryDropdown").classList.toggle("hide");
 	}
 	if (num == "5") {
-		document.getElementById("sortPanel").classList.toggle("hide");
+		document
+			.getElementById("sortPanel")
+			.classList.toggle("position-y-negative");
+		document
+			.getElementById("resultsPanel")
+			.classList.toggle("position-y-negative");
 	}
 }
 document.getElementById("collapse-filter").onclick = (e) => {
 	e.preventDefault();
 };
-
-
 
 // window.onclick = function (event) {
 // 	if (!event.target.matches(".dropbtn")) {
